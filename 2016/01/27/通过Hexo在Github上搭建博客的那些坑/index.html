@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>通过Hexo在Github上搭建博客的那些坑 | Rui&#39;s Blog</title>
+  <meta name="author" content="Rui Liu">
+  
+  <meta name="description" content="ios, swift, 数据, hexo">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="通过Hexo在Github上搭建博客的那些坑"/>
+  <meta property="og:site_name" content="Rui&#39;s Blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Rui&#39;s Blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11520870-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Rui&#39;s Blog</a></h1>
+  <h2><a href="/">做一个又美又酷的程序媛^_^</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">主页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/links">友链</a></li>
+    
+      <li><a href="https://github.com/reee">GitHub</a></li>
+    
+      <li><a href="https://twitter.com/_zzzh">Twitter</a></li>
+    
+      <li><a href="/about-me">关于我</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div> 
+        <time datetime="2016-01-27T04:08:24.000Z"><a href="/2016/01/27/通过Hexo在Github上搭建博客的那些坑/">Jan 27 2016</a></time>
+      
+      
+  
+    <h1 class="title">通过Hexo在Github上搭建博客的那些坑</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="u4E00_u3001_u4F5C_u8005_u53E8_u53E8_u53E8"><a href="#u4E00_u3001_u4F5C_u8005_u53E8_u53E8_u53E8" class="headerlink" title="一、作者叨叨叨"></a>一、作者叨叨叨</h3><p>–</p>
+<p>这篇文章的目的是为了记录在搭建Github博客时出现的坑。很遗憾，本人在根据网络教程搭建博客时，几乎每一步都出现了问题，so sad ~ </p>
+<p>所以记录一下正确运行结果，错误运行结果，以及解决方案，供参考。如果你已搭建成功，不需要看此文章。</p>
+<ul>
+<li>时间：2016年1月27日。</li>
+<li>环境：MAC OS X El Captian 10.11</li>
+<li>Node版本：4.2.3</li>
+</ul>
+<a id="more"></a>
+<h3 id="u4E8C_u3001_u5B89_u88C5_u6559_u7A0B"><a href="#u4E8C_u3001_u5B89_u88C5_u6559_u7A0B" class="headerlink" title="二、安装教程"></a>二、安装教程</h3><p>–</p>
+<ol>
+<li><p>最快最好的教程就是去官网查看，而不是任何网络上的教程，因为时间和版本的原因，很可能教程中的方法已经过时。</p>
+<p> <a href="https://hexo.io/docs/" target="_blank" rel="external">官网地址</a></p>
+<p> ps：本人未按官网文档搭建，所以没有任何可参考建议。</p>
+</li>
+<li><p>网络上的教程</p>
+<p> 我参考的是简书上一篇2014年的文章，作者很详细的介绍了搭建的步骤。但是只给出了命令，没有给出任何出现错误时应该怎么做的提示。所以，我在此基础上做一个补充。</p>
+<p> 需要搭建的朋友们可以先按文章中的步骤搭建，遇到错误了，可以参考我的文章。原文链接如下：</p>
+<p> <a href="http://www.jianshu.com/p/858ecf233db9#" target="_blank" rel="external">通过Hexo在Github上搭建博客教程</a></p>
+</li>
+</ol>
+<h3 id="u4E09_u3001_u8D9F_u8FC7_u7684_u90A3_u4E9B_u5751"><a href="#u4E09_u3001_u8D9F_u8FC7_u7684_u90A3_u4E9B_u5751" class="headerlink" title="三、趟过的那些坑"></a>三、趟过的那些坑</h3><p>– </p>
+<ul>
+<li><h4 id="u57511_uFF1A-bash_3A_npm_3A_command_not_found"><a href="#u57511_uFF1A-bash_3A_npm_3A_command_not_found" class="headerlink" title="坑1：-bash: npm: command not found"></a><strong>坑1：-bash: npm: command not found</strong></h4><p>  假设，node环境你已安装完成，但是执行npm命令时报错。（别问我为什么，因为我之前就安装成功了，不成功网上也有好多解决方案）</p>
+<ul>
+<li><p><strong>npm错误结果，如下图：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/1.png" alt="npm报错"></p>
+</li>
+<li><p><strong>解决方案：</strong></p>
+<p>  bash出错，一般是环境变量没有配置好。试用了网上所有方法都不管用。所以，只能重新安装了。</p>
+<p>  npm是在安装node时顺带安装的。重新命令行安装node环境，会提示node已安装。所以，<strong>我最后的解决办法是，下载 node-v4.2.3.pkg 安装包，手动安装</strong>，就可以了。</p>
+<p>  安装完成会提示node安装成功，npm安装成功。这时，npm命令就可以使用啦~~ 如下图：</p>
+</li>
+<li><p><strong>npm正确结果：</strong>  </p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/2.png" alt="npm正确运行结果"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h4 id="u57512_uFF1Anpm_install_hexo_-g__u62A5_u9519"><a href="#u57512_uFF1Anpm_install_hexo_-g__u62A5_u9519" class="headerlink" title="坑2：npm install hexo -g 报错"></a><strong>坑2：npm install hexo -g 报错</strong></h4><ul>
+<li><p><strong>错误如下：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/10.png" alt="error"></p>
+</li>
+<li><p><strong>错误原因：</strong></p>
+<p>  安装目录出错。npm安装是在当前目录下安装，最后安装的位置是/usr/local/bin 。虽然上面的命令是在全局下安装，但是执行命令的目录不能是node的安装目录，需要换到根目录或者其他目录下即可。</p>
+</li>
+<li><p><strong>正确运行结果：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/9.png" alt="right"></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h4 id="u57513_uFF1A_hexo_generate__u62A5_u9519"><a href="#u57513_uFF1A_hexo_generate__u62A5_u9519" class="headerlink" title="坑3： hexo generate 报错"></a><strong>坑3： hexo generate 报错</strong></h4><ul>
+<li><p><strong>错误如下：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/4.png" alt="erro"></p>
+<pre><code>ps： hexo g 等同于 hexo generate，命令行会自动补全命令。下同。
+</code></pre></li>
+<li><p><strong>解决方案：</strong></p>
+<p>  我自己建了一个目录叫blog，在此目录下存放我的博客内容。hexo init 成功之后，generate报错。一开始还在网上各种查找方法尝试，最后乖乖看提示，试用了下提示的try running，结果就好了。</p>
+<p>  所以，一定要看错误提示。<strong>执行命令：npm install hexo –save</strong> 即可。</p>
+</li>
+<li><p><strong>正确运行结果：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/5.png" alt="right"></p>
+<p>  也可以是这样的：</p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/13.png" alt="right"></p>
+<pre><code>ps: 
+如上图红线标注，一定要出现 hello-world文件才算创建成功。
+如果也出现了粉红色字体创建，但是没有hello-world文件创建，那就是没有成功。
+需要要你调用 hexo clean 方法先clean，再重新执行generate创建一次。
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h4 id="u57514_uFF1A_hexo_server__u62A5_u9519"><a href="#u57514_uFF1A_hexo_server__u62A5_u9519" class="headerlink" title="坑4： hexo server 报错"></a><strong>坑4： hexo server 报错</strong></h4><ul>
+<li><p><strong>错误如下：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/11.png" alt="error"></p>
+<p>  结果中没有报错，也没有返回正确结果，只呈现了hexo所包含的命令行。这样是不正确的，我们先看下正确的结果。</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* **正确运行结果：**
+
+    ![right](http://7xqioq.com1.z0.glb.clouddn.com/12.png)    
+
+    http://localhost:4000/  可以访问成功。
+
+
+* **解决方案：**
+
+    只要上一步骤 hexo generate 正确了，这步就不会错。所以，上一步 generate 一定要出现hello-world 文档。所以sever出错，要去检查上一步。
+</code></pre><ul>
+<li><h4 id="u57515_uFF1A_hexo_deploy__23_u8FDB_u884C_u90E8_u7F72__u62A5_u9519"><a href="#u57515_uFF1A_hexo_deploy__23_u8FDB_u884C_u90E8_u7F72__u62A5_u9519" class="headerlink" title="坑5： hexo deploy  #进行部署 报错"></a><strong>坑5： hexo deploy  #进行部署 报错</strong></h4><ul>
+<li><p><strong>错误如下：</strong></p>
+<p>  在config配置文件中，最后type类型填写 git 或者 github都会报错。</p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/14.png" alt="error"></p>
+<pre><code>ps：config文件中，deploy: type: 等标签后面一定要有『空格』，否则命令不执行，不报错。
+</code></pre></li>
+<li><p><strong>解决方案：</strong></p>
+<p>  <strong>需要执行命令行：npm install hexo-deployer-git –save</strong>，因为在Hexo 3.0 后server被单独出来了，需要先安装server。如下图：</p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/15.png" alt="right"></p>
+</li>
+<li><p><strong>正确运行结果：</strong></p>
+<p>  <img src="http://7xqioq.com1.z0.glb.clouddn.com/7.png" alt="right"></p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>至此，大功告成。一个本地搭建的博客就推送到网络上了。
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+</div></div>
+  <!--  <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside> -->
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 Rui Liu
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
